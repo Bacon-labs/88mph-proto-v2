@@ -1,0 +1,65 @@
+<nav class="navbar navbar-vertical fixed-left navbar-expand-md @@if(navColor=='default' && !demoMode){navbar-light}@@if(navColor=='inverted' &&!demoMode){navbar-dark}@@if(navColor=='vibrant' && !demoMode){navbar-dark navbar-vibrant}" id="sidebar">
+  <div class="container-fluid">
+
+    <!-- Toggler -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- User (xs) -->
+    <div class="navbar-user d-md-none">
+      <div class="d-block">
+        <div class="btn btn-sm btn-white mr-3">
+          0.0000<img src="@@webRoot/assets/img/icon-default.png" class="ml-2" alt="..." width="20px">
+        </div>
+        <button type="button" name="web3Connect" class="btn btn-sm btn-white">
+          0x000..0000
+        </button>
+      </div>
+    </div>
+
+    <!-- Collapse -->
+    <div class="collapse navbar-collapse" id="sidebarCollapse">
+      <a class="text-white text-left mb-5" href="@@webRoot/dashboard.html">
+        <img class="logo" src="@@webRoot/assets/img/logo.png" class="mr-2" alt="88mph logo" width="42px">
+        <span class="d-inline-block">88mph</span>
+      </a>
+
+      <!-- Navigation -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="@@webRoot/">
+            <i class="fe fe-dollar-sign"></i>Earn fixed APY
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="@@webRoot/deficit-funding.html">
+            <i class="fe fe-activity"></i>Long interest rates
+          </a>
+        </li>
+      </ul>
+
+      <!-- Divider -->
+      <hr class="navbar-divider my-3">
+      <!-- Navigation -->
+      <ul class="navbar-nav mb-md-4">
+        <li class="nav-item">
+          <a class="nav-link" href="https://discord.com/" target="_blank">
+            Get Help
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://88mph.app/docs/" target="_blank">
+            Docs
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" target="_blank">
+             Feedback
+          </a>
+        </li>
+      </ul>
+
+    </div> <!-- / .navbar-collapse -->
+
+  </div>
+</nav>

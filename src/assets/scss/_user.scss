@@ -1,0 +1,95 @@
+//
+// user.scss
+// Use this to write your custom SCSS
+//
+$amber: rgb(255, 176, 0) !important;
+body{
+  font-family: "Glass TTY VT220", sans-serif;
+  color:$amber;
+  background-image: radial-gradient(50% 50% at 50% 50%, rgba(255, 176, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+    background-position: 0px 30vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.navbar-light {
+  background-color:transparent;
+  border-color: #ffb000;
+}
+.navbar-nav .nav-link.active:before{
+  border-color:$amber;
+}
+.avatar-img{
+  image-rendering: pixelated;
+  filter: grayscale(1);
+}
+.logo, .icon-logo{
+  image-rendering: pixelated;
+  filter: grayscale(1);
+}
+a:hover > .logo, a:hover .icon-logo{
+  filter: grayscale(0);
+}
+.table thead th {
+  background-color:transparent;
+  color: $amber;
+  border-bottom: 1px solid $amber;
+}
+.card{
+  border-style: double;
+  border-color:$amber;
+  background: transparent;
+  box-shadow: none;
+  border-width: 3px;
+}
+.rounded-xl{
+  border-radius: 20px
+}
+.modal-dialog-vertical{
+  max-width: 100%;
+}
+
+// IDEA: background-colors
+.bg-dark-curved {
+  background-color: transparent!important;
+  background-image: radial-gradient(#131415,#131415 70%,transparent 70.1%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 200% 150%;
+}
+.bg-dark{
+  background-color: #131415!important
+}
+.bg-amber{
+  background-color: $amber;
+}
+.btn-amber{
+  background:transparent;
+  border-color: $amber
+}
+.navbar-light .navbar-divider {
+  border-color:$amber;
+}
+.border-amber{
+  border-color: $amber;
+}
+.card-link{
+  color:#fff
+}
+.card-link:hover, .card-link:active{
+  color:#fff
+}
+// IDEA: buttons
+.btn-white-opacity{
+  width: 88px!important;
+  height: 88px!important;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 1024px) {
+  .w-lg-60{width: 60%};
+  .w-lg-40{width: 40%}
+}
+@media (max-width: 768px) {
+  .modal-dialog-vertical{
+    max-width: 100%;
+  }
+}

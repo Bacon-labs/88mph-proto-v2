@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    @@include("partials/head.html", {
+    "title": "88mph"
+    })
+  </head>
+  <body>
+
+    @@include("partials/modals.html")
+    @@include("partials/sidebar.html")
+    @@include("partials/topbar.html")
+
+    <!-- MAIN CONTENT
+    ================================================== -->
+    <div class="main-content">
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="container-fluid">
+
+          <!-- Body -->
+          <div class="header-body border-0 p-0">
+            <div class="row align-items-end">
+              <div class="col">
+                <!-- Title -->
+                <h1 class="header-title display-3 mb-3">
+                  $21,000.00
+                </h1>
+                <!-- Pretitle -->
+                <h4 class="text-white mb-5 font-weight-normal">Total deficits funded</h4>
+
+                <div class="card-deck my-4">
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-white mb-0">
+                        Interest earned
+                        <button type="button" class="btn btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <h2 class="mb-0">
+                        $0.0000
+                      </h2>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-white mb-0">
+                        Staked MPH
+                        <button type="button" class="btn btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <h2 class="mb-3">
+                        0.0000 MPH
+                      </h2>
+                      <a href="#" class="card-link">Stake</a>
+                      <a href="#" class="card-link">Unstake & Claim</a>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <!-- Title -->
+                      <h6 class="text-uppercase text-white mb-0">
+                        Claimable rewards
+                        <button type="button" class="btn btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <i class="fe fe-info h4"></i>
+                        </button>
+                      </h6>
+
+                      <!-- Heading -->
+                      <h2 class="mb-3">
+                        $0.0000
+                      </h2>
+                      <a href="#" class="card-link">Claim</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- / .row -->
+          </div> <!-- / .header-body -->
+
+        </div>
+      </div> <!-- / .header -->
+
+      <!-- CARDS -->
+      <div class="container-fluid mb-6">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="mb-4">Current deficits funded</h2>
+            <!-- Current deposits -->
+            <div class="card mb-6">
+              <div class="table-responsive mb-0">
+                <table class="table table-sm table-nowrap card-table">
+                  <thead>
+                    <tr>
+                      <th class="text-white">
+                        Pools
+                      </th>
+                      <th class="text-white">
+                        Deficits funded
+                      </th> 
+                      <th class="text-white">
+                        You earn interest on
+                      </th>                      
+                      <th class="text-white">
+                        Current APY (unstable)
+                      </th>
+                      <th class="text-white">
+                        Interest earned
+                      </th>
+                      <th class="text-white" colspan="2">
+                        ROI
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="list">
+                    <tr class="border-left border-5 border-amber">
+                      <td>
+                        <div class="d-flex align-items-center">
+
+                          <!-- Image -->
+                          <div class="avatar avatar-xs">
+                            <img class="avatar-img rounded-circle mr-3" src="assets/img/usdc.svg" alt="...">
+                          </div>
+
+                          <div class="ml-3">
+
+                            <!-- Heading -->
+                            <h4 class="font-weight-normal mb-1">aUSDC</h4>
+
+                            <!-- Text -->
+                            <small class="text-muted">Aave</small>
+
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <!-- Button -->
+                        <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-amber">
+                          <i class="fe fe-arrow-up mr-2 align-bottom"></i> Claim MPH
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="border-left border-amber">
+                      <td>
+                        <div class="d-flex align-items-center">
+
+                          <!-- Image -->
+                          <h4 class="mb-0">#2</h4>
+
+                          <div class="ml-3">
+
+                            <!-- badge -->
+                            <span class="badge badge-soft-warning mb-1">Locked</span>
+
+                            <!-- Text -->
+                            <small class="text-white d-block">1d 22h 24m 4s left</small>
+
+                          </div>
+                        </div>
+                      
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens</span>
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens @ 0.00% initial fixed APY</span>
+                      </td>                
+                      <td>
+                        0.0000%
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens</span>
+                      </td>
+                      <td>
+                        0.0000%
+                      </td>
+                      <td class="text-right">
+
+                        <!-- Button -->
+                        <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-white">
+                          <i class="fe fe-arrow-up-right mr-2 align-bottom"></i> Transfer
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="border-left border-amber">
+                      <td>
+                        <div class="d-flex align-items-center">
+
+                          <!-- Image -->
+                          <h4 class="mb-0">#1</h4>
+
+                          <div class="ml-3">
+
+                            <!-- badge -->
+                            <span class="badge badge-soft-success mb-1">Unlocked</span>
+
+                            <!-- Text -->
+                            <small class="text-white d-block">0d 0h 0m 0s left</small>
+
+                          </div>
+                        </div>
+
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens</span>
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens @ 0.00% initial fixed APY</span>
+                      </td>                          
+                      <td>
+                        0.0000%
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens</span>
+                      </td>
+                      <td>
+                        0.0000%
+                      </td>
+                      <td class="text-right">
+                        <!-- Button -->
+                        <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-amber">
+                          <i class="fe fe-arrow-up mr-2 align-bottom"></i> Withdraw
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="border-left border-5 border-amber">
+                      <td>
+                        <div class="d-flex align-items-center">
+
+                          <!-- Image -->
+                          <div class="avatar avatar-xs">
+                            <img class="avatar-img rounded-circle mr-3" src="assets/img/dai.svg" alt="...">
+                          </div>
+
+                          <div class="ml-3">
+
+                            <!-- Heading -->
+                            <h4 class="font-weight-normal mb-1">aDAI</h4>
+
+                            <!-- Text -->
+                            <small class="text-muted">Aave</small>
+
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <!-- Button -->
+                        <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-amber">
+                          <i class="fe fe-arrow-up mr-2 align-bottom"></i> Claim MPH
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="border-left border-amber">
+                      <td>
+                        <div class="d-flex align-items-center">
+
+                          <!-- Image -->
+                          <h4 class="mb-0">#2</h4>
+
+                          <div class="ml-3">
+
+                            <!-- badge -->
+                            <span class="badge badge-soft-warning mb-1">Locked</span>
+
+                            <!-- Text -->
+                            <small class="text-white d-block">1d 22h 24m 4s left</small>
+
+                          </div>
+                        </div>
+                      
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens</span>
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens @ 0.00% initial fixed APY</span>
+                      </td>                        
+                      <td>
+                        0.0000%
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens</span>
+                      </td>
+                      <td>
+                        0.0000%
+                      </td>
+                      <td class="text-right">
+                        <!-- Button -->
+                        <a href="#" data-toggle="modal" data-target="#depositMoney" class="btn btn-sm btn-white">
+                          <i class="fe fe-arrow-up-right mr-2 align-bottom"></i> Transfer
+                        </a>
+                      </td>
+                    </tr>
+                    <tr class="border-left border-amber">
+                      <td>
+                        <div class="d-flex align-items-center">
+
+                          <!-- Image -->
+                          <h4 class="mb-0">#1</h4>
+
+                          <div class="ml-3">
+
+                            <!-- badge -->
+                            <span class="badge badge-soft-success mb-1">Unlocked</span>
+
+                            <!-- Text -->
+                            <small class="text-white d-block">0d 0h 0m 0s left</small>
+
+                          </div>
+                        </div>
+
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens</span>
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens @ 0.00% initial fixed APY</span>
+                      </td>                      
+                      <td>
+                        0.0000%
+                      </td>
+                      <td>
+                        <h4 class="mb-1">$0.0000</h4>
+                        <span class="text-white">0.0000 tokens</span>
+                      </td>
+                      <td>
+                        0.0000%
+                      </td>
+                      <td class="text-right">
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- Explore fixed rate opportunities -->
+            <h2 class="mb-2">Explore deficit funding opportunities</h2>
+            <p class="text-white">Fill up the deficit of one or more deposits, and in exchange earn the interest generated by those deposits. 88mph's deficit funding provides a profit even if the interest rate drops (as long as it doesn't drop by more than 25% compared to the original ), and provides even more profits if the interst rate rises. It's like longing the interest rate! <a href="https://88mph.app/docs/" target="_blank" rel="noopener noreferrer">See how  it works</a></p>
+            <!-- Deficit funding opportunities -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row justify-content-between">
+                  <div class="col-auto">
+                    <select class="custom-select" data-toggle="select" data-options='{"minimum-results-for-search": -1}'>
+                      <option data-avatar-src="../assets/img/usdc.svg">
+                        aUSDC
+                      </option>
+                      <option data-avatar-src="../assets/img/dai.svg">
+                        aDAI
+                      </option>
+                    </select>
+                  </div>
+                  <div class="col-auto d-flex align-items-center">
+                    <h4 class="card-header-title">
+                      Estimated future APY: <strong>5.3%</strong>
+                    </h4>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="px-0 pb-2 mt-n2">
+                  <input type="range" class="custom-range" min="0" max="100" step="0.1">
+                  <div class="row justify-content-between text-white px-4">
+                    <div class="col">
+                    <small>0%</small>
+                    </div>
+                    <div class="col text-center">
+                    <small>5.3% (current APY)</small>
+                    </div>
+                    <div class="col text-right">
+                    <small>10.0%</small>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row p-4">
+                  <div class="col-12 col-lg-6">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Number of deposits to fund</label>
+                        <select class="form-control mb-2" id="exampleFormControlSelect1">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </select>
+                        <small id="customDeficitSelectHelp" class="form-text text-muted">Up to 20 deposits</small>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">All pool deposits</label>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                    <h6 class="text-uppercase text-white">
+                      Estimated ROI
+                    </h6>
+                    <h2 class="mb-5">
+                      0.00%
+                    </h2>
+                    <h6 class="text-uppercase text-white">
+                      You pay
+                    </h6>
+                    <h2 class="mb-5">
+                      $0.0000
+                    </h2>
+                    <h6 class="text-uppercase text-white">
+                      You earn interest on
+                    </h6>
+                    <h2 class="mb-5">
+                      $0.0000
+                    </h2>
+                  </div>
+                </div>
+              </div>
+              <a class="text-white lead" href="#">
+                <div class="card-footer bg-purple text-center">
+                  Fund deposits
+                </div>
+              </a>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+        <p class="mb-5 text-white text-center small">88mph smart contracts are audited and secured by <a href="#">QuantStamp</a>.</p>
+        
+      </div>
+
+    </div><!-- / .main-content -->
+
+    <!-- JAVASCRIPT
+    ================================================== -->
+    @@include("partials/scripts.html")
+
+  </body>
+</html>
