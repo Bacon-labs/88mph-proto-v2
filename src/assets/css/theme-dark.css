@@ -11467,11 +11467,7 @@ a:focus, button:focus {
 
 body {
   font-family: "Glass TTY VT220", sans-serif;
-  color: #ffb000 !important;
-  background-image: radial-gradient(50% 50% at 50% 50%, rgba(255, 176, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-  background-position: 0px 50vh;
-  background-attachment: fixed;
-  background-repeat: no-repeat; }
+  color: #ffb000 !important; }
 
 .navbar-light {
   background-color: transparent;
@@ -11535,6 +11531,10 @@ a:hover > .logo, a:hover .icon-logo {
 
 .text-amber {
   color: #ffb000 !important; }
+
+.glowing {
+  color: #ffe0b2;
+  text-shadow: 0 0 3px #FFE0B2, 0 0 10px #FFB74D, 0 0 20px #FB8C00, 0 0 30px #F57C00; }
 
 .navbar-light .navbar-divider {
   border-color: #ffb000 !important; }
