@@ -2,12 +2,12 @@
 // user.scss
 // Use this to write your custom SCSS
 //
-$amber: rgb(255, 176, 0) !important;
+$amber: #ffb000 !important;
 body{
   font-family: "Glass TTY VT220", sans-serif;
   color:$amber;
   background-image: radial-gradient(50% 50% at 50% 50%, rgba(255, 176, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-    background-position: 0px 30vh;
+    background-position: 0px 50vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -35,11 +35,11 @@ a:hover > .logo, a:hover .icon-logo{
   border-bottom: 1px solid $amber;
 }
 .card{
-  border-style: double;
+  border-style: solid;
   border-color:$amber;
   background: transparent;
   box-shadow: none;
-  border-width: 3px;
+  border-width: 1px;
 }
 .rounded-xl{
   border-radius: 20px
@@ -65,6 +65,9 @@ a:hover > .logo, a:hover .icon-logo{
 .btn-amber{
   background:transparent;
   border-color: $amber
+}
+.text-amber{
+  color: $amber;
 }
 .navbar-light .navbar-divider {
   border-color:$amber;

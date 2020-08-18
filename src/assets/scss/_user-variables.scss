@@ -24,8 +24,8 @@ $lighter: $gray-900-dark !default;
 // Include Glass TTY VT220
 @font-face {
     font-family: 'Glass TTY VT220';
-    src: url('/assets/fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf');
-    src: url('/assets/fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf') format('truetype');
+    src: url('../fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf');
+    src: url('../fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf') format('truetype');
 }
 $border-radius: 0rem !default;
 $border-radius-lg: 0rem !default;

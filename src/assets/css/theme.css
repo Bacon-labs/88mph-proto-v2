@@ -6,8 +6,8 @@
  */
 @font-face {
   font-family: 'Glass TTY VT220';
-  src: url("/assets/fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf");
-  src: url("/assets/fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf") format("truetype"); }
+  src: url("../fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf");
+  src: url("../fonts/Glass_TTY_VT220/Glass_TTY_VT220.ttf") format("truetype"); }
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -11421,7 +11421,7 @@ body {
   font-family: "Glass TTY VT220", sans-serif;
   color: #ffb000 !important;
   background-image: radial-gradient(50% 50% at 50% 50%, rgba(255, 176, 0, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
-  background-position: 0px 30vh;
+  background-position: 0px 50vh;
   background-attachment: fixed;
   background-repeat: no-repeat; }
 
@@ -11456,11 +11456,11 @@ a:hover > .logo, a:hover .icon-logo {
   border-bottom: 1px solid #ffb000 !important; }
 
 .card {
-  border-style: double;
+  border-style: solid;
   border-color: #ffb000 !important;
   background: transparent;
   box-shadow: none;
-  border-width: 3px; }
+  border-width: 1px; }
 
 .rounded-xl {
   border-radius: 20px; }
@@ -11484,6 +11484,9 @@ a:hover > .logo, a:hover .icon-logo {
 .btn-amber {
   background: transparent;
   border-color: #ffb000 !important; }
+
+.text-amber {
+  color: #ffb000 !important; }
 
 .navbar-light .navbar-divider {
   border-color: #ffb000 !important; }
