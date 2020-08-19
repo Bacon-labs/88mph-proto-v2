@@ -11536,9 +11536,6 @@ a:hover > .logo, a:hover .icon-logo {
   color: #ffe0b2;
   text-shadow: 0 0 3px #FFE0B2, 0 0 10px #FFB74D, 0 0 20px #FB8C00, 0 0 30px #F57C00; }
 
-.navbar-light .navbar-divider {
-  border-color: #ffb000 !important; }
-
 .border-amber {
   border-color: #ffb000 !important; }
 
@@ -11553,6 +11550,13 @@ a:hover > .logo, a:hover .icon-logo {
   height: 88px !important;
   background-color: rgba(255, 255, 255, 0.5); }
 
+.navbar-light .navbar-toggler-icon {
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: pixelated;
+  -webkit-filter: sepia(1);
+          filter: sepia(1); }
+
 @media (min-width: 1024px) {
   .w-lg-60 {
     width: 60%; }
@@ -11561,4 +11565,6 @@ a:hover > .logo, a:hover .icon-logo {
 
 @media (max-width: 768px) {
   .modal-dialog-vertical {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .navbar-light {
+    border: 0 !important; } }

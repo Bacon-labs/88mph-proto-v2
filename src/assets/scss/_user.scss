@@ -69,9 +69,6 @@ a:hover > .logo, a:hover .icon-logo{
   color: #ffe0b2;
   text-shadow:0 0 3px #FFE0B2, 0 0 10px #FFB74D, 0 0 20px #FB8C00, 0 0 30px #F57C00;
 }
-.navbar-light .navbar-divider {
-  border-color:$amber;
-}
 .border-amber{
   border-color: $amber;
 }
@@ -81,11 +78,15 @@ a:hover > .logo, a:hover .icon-logo{
 .card-link:hover, .card-link:active{
   color:#fff
 }
-// IDEA: buttons
+// buttons
 .btn-white-opacity{
   width: 88px!important;
   height: 88px!important;
   background-color: rgba(255, 255, 255, 0.5);
+}
+.navbar-light .navbar-toggler-icon {
+  image-rendering: pixelated;
+  filter: sepia(1);
 }
 @media (min-width: 1024px) {
   .w-lg-60{width: 60%};
@@ -95,4 +96,8 @@ a:hover > .logo, a:hover .icon-logo{
   .modal-dialog-vertical{
     max-width: 100%;
   }
+  
+.navbar-light {
+  border:0!important
+}
 }
