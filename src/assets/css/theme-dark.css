@@ -11608,8 +11608,9 @@ a:hover > .logo, a:hover .icon-logo {
   background-color: #ffb000 !important; }
 
 .btn-amber {
-  background: transparent;
-  border-color: #ffb000 !important; }
+  background-color: #ffb000 !important;
+  padding: 2px 0px;
+  color: #131415; }
 
 .text-amber {
   color: #ffb000 !important; }

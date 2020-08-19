@@ -143,8 +143,9 @@ a:hover > .logo, a:hover .icon-logo{
   background-color: $amber;
 }
 .btn-amber{
-  background:transparent;
-  border-color: $amber
+  background-color:$amber;
+  padding: 2px 0px;
+  color: #131415;
 }
 .text-amber{
   color: $amber;
