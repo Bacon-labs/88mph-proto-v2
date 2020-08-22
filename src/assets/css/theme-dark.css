@@ -11469,6 +11469,10 @@ body {
   font-family: "Glass TTY VT220", sans-serif;
   color: #ffb000 !important; }
 
+input[type=text] {
+  caret-color: #ffb000 !important;
+  color: #ffb000 !important; }
+
 input[type=range] {
   width: 100%;
   margin: 0px 0;

@@ -506,218 +506,195 @@
     <!-- Modal: deposit money -->
     <!-- IDEA: modal depositMoney -->
     <div class="modal fade fixed-right" id="depositMoney" tabindex="-1" role="dialog" aria-labelledby="depositMoney" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
         <div class="modal-content">
-          <div class="modal-body p-lg-0">
-            <div class="d-inline-block w-lg-60">
-              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
-                <i class="fe fe-arrow-left h2"></i>
-              </button>
-              <div class="row justify-content-center">
-                <div class="col col-lg-8">
-                  <!-- Heading -->
-                  <h1 class="display-4 text-center my-5">
-                    Buy shares
-                  </h1>
-
-                  <div class="card mb-6">
-                    <div class="card-body">
-                      <div class="form-group">
-                        <label class="mt-1">Buy</label>
-                        <div class="input-group mb-4">
-                          <select class="custom-select custom-select-lg">
-                            <option value="fundtitle">Fund share A</option>
-                            <option value="fundtitle">Fund share B</option>
-                            <option value="fundtitle">Fund share C</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="form-row">
-                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
-                          <label>Amount</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
-                            <div class="input-group-append">
-                              <button class="btn border" type="button">Max</button>
+          <div class="modal-body pt-0 py-lg-0">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6 col-xl-6 pt-0 pr-lg-5">
+                <div class="row no-gutters">
+                  <div class="col-auto mr-auto">
+                    <button class="btn btn-link text-white pl-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                      <i class="fe fe-arrow-left h2 mb-0"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row justify-content-center no-gutters">
+                  <div class="col-12 col-lg-10 pt-3 pb-5">
+                    <h1 class="display-4 text-center">
+                      How much would you like to deposit?
+                    </h1>
+                    <p class="text-secondary small text-center mb-5">Deposit to earn upfront fixed APY, protocol fees, incentives, etc.<br><a href="https://88mph.app/docs/" target="_blank" rel="noopener noreferrer">See how it works</a></p>
+              
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="form-row">
+                          <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
+                            <label>Amount</label>
+                            <div class="input-group mb-2">
+                              <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
+                              <div class="input-group-append">
+                                <button class="btn border" type="button">Max</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="form-group col-12 col-lg-6 mb-0">
+                            <label>Lending pool</label>
+                            <div class="input-group input-group-lg mb-2">
+                              <select class="custom-select custom-select">
+                                <option value="">aDAI</option>
+                                <option value="">cDAI</option>
+                              </select>
                             </div>
                           </div>
                         </div>
-                        <div class="form-group col-12 col-lg-6 mb-0">
-                          <label>Pay with</label>
-                          <div class="input-group input-group-lg mb-2">
-                            <select class="custom-select custom-select">
-                              <option value="">ETH</option>
-                              <option value="">DAI</option>
-                              <option value="">USDC</option>
-                              <option value="">WBTC</option>
-                              <option value="">LINK</option>
-                            </select>
+                        <small class="form-text text-secondary mb-4">0.0000 ETH available</small>
+                        <div class="form-group row mb-0">
+                          <label for="colFormLabel" class="col-sm-7 col-form-label">Lending duration (min. 7)</label>
+                          <div class="col-sm-5">
+                            <div class="input-group ml-auto w-50">
+                              <input type="tel" min="91" value="365" placeholder="365" data-mask="#,##0" data-mask-reverse="true" id="lock-period" class="form-control text-right">
+                              <div class="input-group-append">
+                                <span id="lock-period" class="input-group-text border-0 text-secondary bg-transparent text-right pr-0">days</span>
+                              </div>
+                            </div>
                           </div>
                         </div>
+                        <div class="mb-4">
+                          <button class="btn btn-sm btn-link text-white pl-0" type="button" name="7d">[7d]</button>
+                          <button class="btn btn-sm btn-link text-white" type="button" name="30d">[30d]</button>
+                          <button class="btn btn-sm btn-link text-white" type="button" name="90d">[90d]</button>
+                          <button class="btn btn-sm btn-link text-white" type="button" name="180d">[180d]</button>
+                          <button class="btn btn-sm btn-link text-white" type="button" name="365d">[365d]</button>
+                          <button class="btn btn-sm btn-link text-white" type="button" name="730d">[730d]</button>
+                        </div>
+                        <div class="table-responsive">
+                          <table class="table mb-0">
+                            <thead>
+                              <tr>
+                                <th class="px-0 bg-transparent border-0 text-white" colspan="2">Order details</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="px-0 border-0 text-white">
+                                  <strong>Fixed APY</strong>
+                                  <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Fixed APY according to lending duration">
+                                    [i]
+                                  </button>
+                                </td>
+                                <td class="text-right text-white border-0">
+                                  0.00%
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="px-0 text-white border-0">
+                                  <strong>Upfront interest</strong>
+                                  <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Fixed-rate interest you'll receive when your tx is confirmed">
+                                    [i]
+                                  </button>
+                                </td>
+                                <td class="text-white text-right border-0">
+                                  0.0000 DAI
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="px-0 text-white border-0">
+                                  <strong>MPH APY daily / weekly</strong>
+                                  <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="MPH LP rewards annualized and compounded based on the last day/week">
+                                    [i]
+                                  </button>
+                                </td>
+                                <td class="text-white text-right border-0">
+                                  +0.0000% / +0.0000%
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="px-0 border-top border-top-1 border-white text-white"><strong>Deposit fixed APY + MPH weekly APY</strong></td>
+                                <td colspan="2" class="text-right border-top border-top-1 border-white text-amber glowing">
+                                  <span class="h3">0.0000%</span>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <a class="btn btn-link btn-lg btn-block text-white" href="">[Deposit]</a>
                       </div>
-                      <small class="form-text text-secondary mb-4">100.0000 ETH available</small>
-                      <div class="form-group">
-                        <label>PEAK tokens to stake</label>
-                        <input type="text" class="form-control form-control-lg mb-2" value="0.00" aria-label="" aria-describedby="">
-                        <small class="form-text text-secondary mb-4">0.0000 PEAK available &bull; <a href="https://www.bibox.com/fullExchange?coinPair=PEAK_USDT" target="_blank">Buy</a></small>
-                      </div>
-                      <div class="table-responsive d-block d-lg-none mb-4">
-                        <table class="table mb-0">
-                          <thead>
-                            <tr>
-                              <th class="px-0 bg-transparent border-0 text-white">Order details</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="px-0 border-0 text-white">
-                                <strong>Share price (USD)</strong>
-                              </td>
-                              <td class="px-0 text-right text-white border-0">
-                                10.00
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="px-0 text-white border-0">
-                                <strong>Shares to receive</strong>
-                              </td>
-                              <td class="px-0 text-white text-right border-0">
-                                1,000.0000
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="px-0 text-white border-0">
-                                <strong>PEAK tokens to stake</strong><br>
-                              </td>
-                              <td class="px-0 text-white text-right border-0">
-                                1,000.0000
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="px-0 border-top border-top-1 border-white text-white"><strong>Total cost</strong></td>
-                              <td colspan="2" class="px-0 text-right border-top border-top-1 border-white text-white">
-                                <span class="h3">30.0000 ETH</span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <a class="btn btn-primary btn-lg btn-block" href="dashboard-full_3.html">Buy Fund share A</a>
-                      <button class="btn btn-link btn-lg btn-block text-white" id='buy'>Use Fiat</button>
-                      <div id="wyre-dropin-widget-container"></div>
-
-                      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-                      <script src="https://verify.sendwyre.com/js/verify-module-init-beta.js"></script>
-                      <script type="text/javascript">
-                          (function($) {
-
-                              // debit card popup
-                              var widget = new Wyre({
-                                  env: 'test',
-                                  operation: {
-                                      type: 'debitcard-hosted-dialog',
-                                      dest: "ethereum:0x98B031783d0efb1E65C4072C6576BaCa0736A912",
-                                      destCurrency: "ETH",
-                                      sourceAmount: 10.0,
-                                      paymentMethod: 'debit-card'
-                                  }
-                              });
-
-                              widget.on("exit", function (e) {
-                                  console.log("exit", e);
-                              })
-
-                              widget.on("error", function (e) {
-                                  console.log("error", e);
-                              })
-
-                              widget.on("complete", function (e) {
-                                  console.log("complete", e );
-                              });
-
-                              widget.on('ready', function(e) {
-                                  console.log("ready", e );
-                                  // widget.open();
-                              })
-
-                              $('#buy').click(function(){
-                                  console.log('open')
-                                  widget.open();
-                              })
-
-                          })(jQuery);
-                      </script>
                     </div>
                   </div>
-
-                  <h2>FAQ</h2>
-                  <div class="card card-inactive mb-5">
-                    <div class="card-body">
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <a class="btn btn-sm btn-primary" href="https://gitbook.com">Need help?</a>
-                    </div>
-                  </div>
-
-                  <!-- Text -->
-                  <p class="text-secondary small">
-                    By tapping or clicking 'Confirm', you accept the following terms of service. You also agree that your purchase will be available immediately.
-                  </p>
                 </div>
               </div>
-            </div>
-            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
-              <div class="bg-white vh-100 p-4">
+              <div class="col-12 col-lg-6 col-xl-6 bg-amber p-4 px-lg-5 mr-lg-n4 minvh100 d-none d-lg-flex">
                 <div class="row justify-content-center">
                   <div class="col-10">
-                    <div class="table-responsive">
-                      <table class="table mb-0">
-                        <thead>
-                          <tr>
-                            <th class="px-0 bg-transparent border-0 text-dark">Order details</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="px-0 border-0 text-dark">
-                              <strong>Share price (USD)</strong>
-                            </td>
-                            <td class="px-0 text-right text-dark border-0">
-                              10.00
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="px-0 text-dark border-0">
-                              <strong>Shares to receive</strong>
-                            </td>
-                            <td class="px-0 text-dark text-right border-0">
-                              1,000.0000
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="px-0 text-dark border-0">
-                              <strong>PEAK tokens to stake</strong>
-                            </td>
-                            <td class="px-0 text-dark text-right border-0">
-                              1,000.0000
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="px-0 border-top border-top-1 border-dark text-dark"><strong>Total cost</strong></td>
-                            <td colspan="2" class="px-0 text-right border-top border-top-1 border-dark text-dark">
-                              <span class="h3">30.000000 ETH</span>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                    <div class="list-group list-group-flush list-group-activity my-5">
+                      <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-auto">
+
+                           <h2 class="bg-amber text-center text-dark"><1></h2>
+
+                          </div>
+                          <div class="col ml-n2 d-flex align-items-center">
+
+                            <!-- Heading -->
+                            <p class="mb-0 text-dark font-weight-bold">
+                              Deposit plain stablecoins or tokens - DAI/USDC/USDT/TUSD/BUSD/sUSD/LINK/YFI - which will get converted underneath to cTokens for compound pools, aTokens for aave pools or xyzTokens for others pools.
+                            </p>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                      <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-auto text-center text-dark">
+
+                            <h2 class="bg-amber text-center text-dark"><2></h2>
+
+                          </div>
+                          <div class="col ml-n2 d-flex align-items-center">
+
+                            <!-- Heading -->
+                            <p class="mb-0 text-dark font-weight-bold">
+                              After depositing in the pool, you receive upfront fixed-rate interest and liquidity provider (LP) tokens. They represent your share of ownership in the pool.
+                            </p>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                      <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-auto text-center text-dark">
+
+                            <h2 class="bg-amber text-center text-dark"><3></h2>
+
+                          </div>
+                          <div class="col ml-n2 d-flex align-items-center">
+
+                            <!-- Heading -->
+                            <p class="mb-0 text-dark font-weight-bold">
+                              By providing liquidity on any of the 88mph pools, you earn MPH LP reward tokens during the fixed-period of lending.
+                            </p>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
+                      <div class="list-group-item">
+                        <div class="row">
+                          <div class="col-auto text-center text-dark">
+
+                            <h2 class="bg-amber text-center text-dark"><4></h2>
+
+                          </div>
+                          <div class="col ml-n2 d-flex align-items-center">
+
+                            <!-- Heading -->
+                            <p class="mb-0 text-dark font-weight-bold">
+                              By staking your MPH, you can claim your share of rewards from the 88mph's vault where all the 88mph fee and external incentives harvested - COMP, CRV, etc. - are collected.
+                            </p>
+
+                          </div>
+                        </div> <!-- / .row -->
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -958,228 +935,80 @@
     </div><!-- / modal -->
 
 
-    <!-- Modal: modal-stake-peak -->
-    <!-- IDEA: modal modal-stake-peak -->
-    <div class="modal fade fixed-right" id="modal-stake-peak" tabindex="-1" role="dialog" aria-labelledby="modal-stake-peak" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
+    <!-- Modal: modal-stake-mph -->
+    <!-- IDEA: modal modalStakeMPH -->
+    <div class="modal fade fixed-right" id="modalStakeMPH" tabindex="-1" role="dialog" aria-labelledby="modalStakeMPH" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
         <div class="modal-content">
-          <div class="modal-body p-lg-0">
-            <div class="d-inline-block w-lg-60">
-              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
-                <i class="fe fe-arrow-left h2"></i>
-              </button>
-              <div class="row justify-content-center">
-                <div class="col col-lg-8">
-                  <!-- Heading -->
-                  <h1 class="display-4 text-center my-5">
-                    Stake Peak
-                  </h1>
-
-                  <div class="card mb-6">
-                    <div class="card-body">
-                      <div class="form-group">
-                        <label>Amount to stake</label>
-                        <div class="input-group mb-2">
-                          <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
-                          <div class="input-group-append">
-                            <button class="btn border" type="button">Max</button>
+          <div class="modal-body pt-0 py-lg-0">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6 col-xl-6 pt-0 pr-lg-5">
+                <div class="row no-gutters">
+                  <div class="col-auto mr-auto">
+                    <button class="btn btn-link text-white pl-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                      <i class="fe fe-arrow-left h2 mb-0"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row justify-content-center no-gutters">
+                  <div class="col-12 col-lg-10 pt-3 pb-5">
+                    <h1 class="display-4 text-center">
+                      How much would you like to stake?
+                    </h1>
+                    <p class="text-secondary small text-center mb-5">
+                      If you stake your MPH, you are eligible to collect two kinds of rewards collected in 88mph vault: 88mph fees, and incentives like governance tokens or LP rewards harvested by the 88mph pools on external protocols (COMP, CRV, etc).</p>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="form-group mb-0">
+                          <label>Amount</label>
+                          <div class="input-group mb-2">
+                            <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
+                            <div class="input-group-append">
+                              <button class="btn border" type="button">Max</button>
+                            </div>
                           </div>
                         </div>
-                        <small class="form-text text-secondary mb-4">1,000.0000 PEAK available &bull; <a href="https://www.bibox.com/fullExchange?coinPair=PEAK_USDT" target="_blank">Buy</a></small>
-                      </div>
-                      <div class="form-group">
-                        <label>Lock-up in day</label>
-                        <div class="input-group input-group-lg mb-2">
-                          <input type="text" class="form-control border-right-0 pr-0" placeholder="0" aria-label="lockup" id="lockup">
-                          <div class="input-group-append">
-                            <button class="btn border" type="button">Max</button>
-                          </div>
+                        <small class="form-text text-secondary mb-2">0.0000 MPH available</small>
+                        <div class="table-responsive">
+                          <table class="table mb-0">
+                            <tbody>
+                              <tr>
+                                <td class="px-0 text-white border-0">
+                                  <strong>New share of the vault</strong>
+                                  <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="">
+                                    [i]
+                                  </button>
+                                </td>
+                                <td class="text-white text-right border-0">
+                                  0.OOOO% <br>
+                                  <small>current: 0.0000%</small>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="px-0 text-white border-0">
+                                  <strong>APY daily / weekly</strong>
+                                  <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="">
+                                    [i]
+                                  </button>
+                                </td>
+                                <td class="text-white text-right border-0">
+                                  +0.0000% / +0.0000%
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
                         </div>
-                        <small class="form-text text-secondary mb-4">Min. x days / Max. 1,000 days</small>
+                        <a class="btn btn-link btn-lg btn-block text-white" href="">[Stake]</a>
                       </div>
-                      <div class="table-responsive d-block d-lg-none mb-4">
-                        <table class="table mb-0">
-                          <thead>
-                            <tr>
-                              <th class="px-0 bg-transparent border-0 text-white">Order details</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="px-0 border-0">
-                                <strong>Bigger Bonus</strong>
-                                <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                  <i class="fe fe-info h4"></i>
-                                </button>
-                              </td>
-                              <td class="px-0 text-right border-0 text-success">
-                                0.010000%
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="px-0 border-0">
-                                <strong>Longer Bonus</strong>
-                                <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                  <i class="fe fe-info h4"></i>
-                                </button>
-                              </td>
-                              <td class="px-0 text-right border-0 text-success">
-                                36.48%
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="px-0 border-0">
-                                <strong>Referral bonus</strong>
-                                <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                  <i class="fe fe-info h4"></i>
-                                </button>
-                              </td>
-                              <td class="px-0 text-right border-0 text-success">
-                                3.00%
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="px-0 border-0">
-                                <strong>APY rewards</strong>
-                                <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                  <i class="fe fe-info h4"></i>
-                                </button>
-                              </td>
-                              <td class="px-0 text-right border-0 text-success">
-                                36.49%
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="px-0 border-0">
-                                <strong>PEAK rewards</strong><br>
-                              </td>
-                              <td class="px-0 text-right border-0 text-success">
-                                364.902086
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="px-0 border-top border-top-1 border-white "><strong>Total value after staking</strong></td>
-                              <td colspan="2" class="px-0 text-right border-top border-top-1 border-white">
-                                <span class="h3 text-success">1364.902086 PEAK</span>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <a class="btn btn-primary btn-lg btn-block" href="rewards.html">Stake</a>
                     </div>
                   </div>
-
-                  <h2>FAQ</h2>
-                  <div class="card card-inactive mb-5">
-                    <div class="card-body">
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <h3>Question</h3>
-                      <p class="text-secondary mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      <a class="btn btn-sm btn-primary" href="https://gitbook.com">Need help?</a>
-                    </div>
-                  </div>
-
-                  <!-- Text -->
-                  <p class="text-secondary small">
-                    By tapping or clicking 'Stake', you accept the following terms of service.
-                  </p>
                 </div>
               </div>
-            </div>
-            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
-              <div class="bg-white vh-100 p-4">
-                <div class="row justify-content-center">
-                  <div class="col-10">
-                    <div class="table-responsive">
-                      <table class="table mb-0 text-dark">
-                        <thead>
-                          <tr>
-                            <th class="px-0 bg-transparent border-0 text-dark">Order details</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td class="px-0 border-0">
-                              <strong>Bigger Bonus</strong>
-                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                <i class="fe fe-info h4"></i>
-                              </button>
-                            </td>
-                            <td class="px-0 text-right border-0 text-success">
-                              0.010000%
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="px-0 border-0">
-                              <strong>Longer Bonus</strong>
-                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                <i class="fe fe-info h4"></i>
-                              </button>
-                            </td>
-                            <td class="px-0 text-right border-0 text-success">
-                              36.48%
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="px-0 border-0">
-                              <strong>Referral bonus</strong>
-                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                <i class="fe fe-info h4"></i>
-                              </button>
-                            </td>
-                            <td class="px-0 text-right border-0 text-success">
-                              3.00%
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="px-0 border-0">
-                              <strong>APY rewards</strong>
-                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                <i class="fe fe-info h4"></i>
-                              </button>
-                            </td>
-                            <td class="px-0 text-right border-0 text-success">
-                              36.49%
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="px-0 border-0">
-                              <strong>PEAK rewards</strong>
-                            </td>
-                            <td class="px-0 text-right border-0 text-success">
-                              364.902086
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="px-0 border-0">
-                              <strong>Referral level</strong>
-                              <button type="button" class="btn btn-link p-0 text-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">
-                                <i class="fe fe-info h4"></i>
-                              </button>
-                              <br>
-                              <small>Add <strong>230 PEAK</strong> to unlock level 3</small>
-                            </td>
-                            <td class="px-0 text-right border-0 text-success">
-                              2
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="px-0 border-top border-top-1 border-secondary"><strong>Total value after staking</strong></td>
-                            <td colspan="2" class="px-0 text-right border-top border-top-1 border-secondary">
-                              <span class="h3 text-success">1364.902086 PEAK</span>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
+              <div class="col-12 col-lg-6 col-xl-6 bg-amber p-4 px-lg-5 mr-lg-n4 minvh100 d-none d-lg-block">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="text-dark text-center">Total vault value</h5>
+                    <h1 class="display-1 text-dark text-center">$0.00</h1>
                   </div>
                 </div>
               </div>
@@ -1188,7 +1017,85 @@
         </div>
       </div>
     </div><!-- / modal -->
-
+    <!-- Modal: modal-unstake-claim -->
+    <!-- IDEA: modal modalUnstakeMPH -->
+    <div class="modal fade fixed-right" id="modalUnstakeMPH" tabindex="-1" role="dialog" aria-labelledby="modalUnstakeMPH" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
+        <div class="modal-content">
+          <div class="modal-body pt-0 py-lg-0">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6 col-xl-6 pt-0 pr-lg-5">
+                <div class="row no-gutters">
+                  <div class="col-auto mr-auto">
+                    <button class="btn btn-link text-white pl-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                      <i class="fe fe-arrow-left h2 mb-0"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="row justify-content-center no-gutters">
+                  <div class="col-12 col-lg-10 pt-3 pb-5">
+                    <h1 class="display-4 text-center">
+                      How much would you like to unstake?
+                    </h1>
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="form-group mb-0">
+                          <label>Amount</label>
+                          <div class="input-group mb-2">
+                            <input type="text" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
+                            <div class="input-group-append">
+                              <button class="btn border" type="button">Max</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="table-responsive">
+                          <table class="table mb-0">
+                            <tbody>
+                              <tr>
+                                <td class="px-0 text-white border-0">
+                                  <strong>New share of the vault</strong>
+                                  <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="">
+                                    [i]
+                                  </button>
+                                </td>
+                                <td class="text-white text-right border-0">
+                                  0.OOOO% <br>
+                                  <small>current: 0.0000%</small>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td class="px-0 text-white border-0">
+                                  <strong>Claimable rewards</strong>
+                                  <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="">
+                                    [i]
+                                  </button>
+                                </td>
+                                <td class="text-white text-right border-0">
+                                  $0.0000
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <a class="btn btn-link btn-lg btn-block text-white" href="">[Untake & claim]</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-6 bg-amber p-4 px-lg-5 mr-lg-n4 minvh100 d-none d-lg-block">
+                <div class="row">
+                  <div class="col">
+                    <h5 class="text-dark text-center">Total vault value</h5>
+                    <h1 class="display-1 text-dark text-center">$0.00</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
 
     <!-- Modal: witdraw money -->
     <!-- IDEA: modal withdrawMoney -->
@@ -2973,255 +2880,6 @@
     </div><!-- / modal -->
 
 
-    <!-- Modal: manager-top-up-position -->
-    <!-- IDEA: modal createFund -->
-    <div class="modal fade fixed-right" id="createFund" tabindex="-1" role="dialog" aria-labelledby="createFund" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-vertical bg-white" role="document">
-        <div class="modal-content">
-          <div class="modal-body p-lg-0">
-            <div class="d-inline-block w-lg-60">
-              <button class="btn btn-link text-white position-absolute mt-n4 ml-n4 ml-lg-0 mt-lg-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
-                <i class="fe fe-arrow-left h2"></i>
-              </button>
-              <div class="row justify-content-center">
-                <div class="col col-lg-8">
-                  <!-- Heading -->
-                  <h1 class="display-4 text-center my-5">
-                    Create new fund
-                  </h1>
-                  <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>Access not allowed!</strong> Only a whitelisted address can access this feature!
-
-                    <!-- Button -->
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                    </button>
-
-                  </div>
-
-                  <div class="card mb-4">
-                    <div class="card-body">
-                      <div class="form-row mb-4">
-                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
-                          <label>Fund name</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="" aria-label="" aria-describedby="">
-                        </div>
-                        <div class="form-group col-12 col-lg-6 mb-0">
-                          <label>Share ticker</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="" aria-label="" aria-describedby="">
-                        </div>
-                      </div>
-                      <div class="form-row mb-4">
-                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
-                          <label>Management phase</label>
-                          <div class="input-group mb-2">
-                            <input type="number" class="form-control form-control-lg" placeholder="0" aria-label="" aria-describedby="">
-                            <div class="input-group-append">
-                              <span class="input-group-text rounded-right border-left-0" id="basic-addon3">Days</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group col-12 col-lg-6 mb-0">
-                          <label>Intermission phase</label>
-                          <div class="input-group mb-2">
-                            <input type="number" class="form-control form-control-lg" placeholder="0" aria-label="" aria-describedby="">
-                            <div class="input-group-append">
-                              <span class="input-group-text rounded-right border-left-0" id="basic-addon3">Days</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-row mb-4">
-                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
-                          <label>Management fee/cycle</label>
-                          <div class="input-group mb-2">
-                            <input type="number" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
-                            <div class="input-group-append">
-                              <span class="input-group-text rounded-right border-left-0" id="basic-addon3">%</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group col-12 col-lg-6 mb-0">
-                          <label>Success fee/cycle</label>
-                          <div class="input-group mb-2">
-                            <input type="number" class="form-control form-control-lg" placeholder="0.00" aria-label="" aria-describedby="">
-                            <div class="input-group-append">
-                              <span class="input-group-text rounded-right border-left-0" id="basic-addon3">%</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-row mb-4">
-                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
-                          <label>Reputation token name</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="" aria-label="" aria-describedby="">
-                        </div>
-                        <div class="form-group col-12 col-lg-6 mb-0">
-                          <label>Reputation token ticker</label>
-                          <input type="text" class="form-control form-control-lg" placeholder="" aria-label="" aria-describedby="">
-                        </div>
-                      </div>
-                      <div class="form-row mb-4">
-                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
-                          <label>Rep. token price (DAI)</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control form-control-lg" value="0.00" placeholder="0.00" aria-label="" aria-describedby="">
-                            <div class="input-group-append">
-                              <span class="input-group-text rounded-right border-left-0" id="basic-addon3">DAI</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group col-12 col-lg-6 mb-0">
-                          <label>Lot size</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control form-control-lg" value="0.00" placeholder="0.00" aria-label="" aria-describedby="">
-                            <div class="input-group-append">
-                              <span class="input-group-text rounded-right border-left-0" id="basic-addon3">KRO</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-row mb-4">
-                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
-                          <label>Dead manager period</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control form-control-lg" value="0" placeholder="60" aria-label="" aria-describedby="">
-                            <div class="input-group-append">
-                              <span class="input-group-text rounded-right border-left-0" id="basic-addon3">Day</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="form-group col-12 col-lg-6 mb-0">
-                          <label>Huge manager's loss thresold</label>
-                          <div class="input-group mb-2">
-                            <input type="text" class="form-control form-control-lg" value="0.00" placeholder="25.00" aria-label="" aria-describedby="">
-                            <div class="input-group-append">
-                              <span class="input-group-text rounded-right border-left-0" id="basic-addon3">%</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form-row mb-4">
-                        <div class="form-group col-12 col-lg-6 mb-4 mb-lg-0">
-                          <label>Whitelist</label><br>
-                          <div class="custom-control custom-radio custom-control-inline"><input class="custom-control-input" id="yes" name="yes" type="radio"><label class="custom-control-label" for="Yes">Yes</label></div>
-                          <div class="custom-control custom-radio custom-control-inline"><input class="custom-control-input" id="no" name="no" type="radio"><label class="custom-control-label" for="No">No</label></div>
-                        </div>
-                        <div class="form-group col-12 col-lg-6 mb-0">
-                          <label>Stablecoin</label><br>
-                        <div class="custom-control custom-radio custom-control-inline"><input class="custom-control-input" id="yes" name="DAI" type="radio"><label class="custom-control-label" for="DAI">DAI</label></div>
-                        <div class="custom-control custom-radio custom-control-inline"><input class="custom-control-input" id="no" name="USDC" type="radio"><label class="custom-control-label" for="USDC">USDC</label></div>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="mb-3">Tradeable assets</div>
-                        <div class="custom-control custom-checkbox mb-3">
-                          <input type="checkbox" class="custom-control-input" id="customCheck1">
-                          <label class="custom-control-label" for="customCheck1">ABC &bull; Asset name</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-3">
-                          <input type="checkbox" class="custom-control-input" id="customCheck2">
-                          <label class="custom-control-label" for="customCheck2">ABC &bull; Asset name</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-3">
-                          <input type="checkbox" class="custom-control-input" id="customCheck3">
-                          <label class="custom-control-label" for="customCheck3">ABC &bull; Asset name</label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card mb-4">
-                    <div class="card-header">
-                      <!-- Title -->
-                      <h4 class="card-header-title">
-                        Managers whitelist
-                      </h4>
-                    </div>
-                    <div class="card-body">
-                      <div class="list-group list-group-flush">
-                        <div class="list-group-item">
-                          <div class="row align-items-center">
-                            <div class="col-auto">
-                              <!-- Title -->
-                              <h5 class="mb-0">
-                                0x1df..0e507
-                              </h5>
-                            </div>
-                            <div class="col-auto ml-auto">
-                              <button class="btn btn-sm btn-white" type="button" name="button">Delete</button>
-                            </div>
-                          </div> <!-- / .row -->
-                        </div>
-                      </div>
-                      <div class="list-group list-group-flush">
-                        <div class="list-group-item">
-                          <div class="row align-items-center">
-                            <div class="col-auto">
-                              <!-- Title -->
-                              <h5 class="mb-0">
-                                0x1df..0e507
-                              </h5>
-                            </div>
-                            <div class="col-auto ml-auto">
-                              <button class="btn btn-sm btn-white" type="button" name="button">Delete</button>
-                            </div>
-                          </div> <!-- / .row -->
-                        </div>
-                      </div>
-                      <div class="list-group list-group-flush">
-                        <div class="list-group-item">
-                          <div class="row align-items-center">
-                            <div class="col-auto">
-                              <!-- Title -->
-                              <h5 class="mb-0">
-                                0x1df..0e507
-                              </h5>
-                            </div>
-                            <div class="col-auto ml-auto">
-                              <button class="btn btn-sm btn-white" type="button" name="button">Delete</button>
-                            </div>
-                          </div> <!-- / .row -->
-                        </div>
-                      </div>
-                    </div>
-                    <!-- / .card-body -->
-                    <div class="card-footer">
-                      <div class="row align-items-center">
-                        <div class="col">
-                          <!-- Input -->
-                          <textarea class="form-control form-control-flush form-control-auto" data-toggle="autosize" rows="1" placeholder="Add whitelisted address" style="overflow: hidden; overflow-wrap: break-word; height: 24px;"></textarea>
-                        </div>
-                        <div class="col-auto">
-                          <!-- Button -->
-                          <button class="btn btn-sm btn-white">
-                            Add
-                          </button>
-                        </div>
-                      </div>
-                      <!-- / .row -->
-                    </div>
-                    <!-- / .card-footer -->
-                  </div>
-
-                  <a class="btn btn-primary btn-lg btn-block mb-6" href="#metamask">Continue</a>
-
-                </div>
-              </div>
-            </div>
-            <div class="d-lg-inline-block w-lg-40 position-fixed d-none">
-              <div class="bg-white vh-100 p-4">
-                <div class="row justify-content-center">
-                  <div class="col-10">
-                    <img class="img-fluid" src="assets/img/illustrations/placeholder.svg">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- / modal -->
-
 
     <!-- Modal: video -->
     <!-- IDEA: modal video -->
@@ -3289,6 +2947,11 @@
             <li class="nav-item">
               <a class="nav-link small" href="https://88mph.app/docs/" target="_blank">
                 Docs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link small" href="https://88mph.app/docs/" target="_blank">
+                Audits
               </a>
             </li>
             <li class="nav-item">
@@ -3367,8 +3030,8 @@
                       <h2 class="mb-3 glowing">
                         0.0000 MPH
                       </h2>
-                      <a href="#" class="card-link">[Stake]</a>
-                      <a href="#" class="card-link">[Unstake & Claim]</a>
+                      <a data-toggle="modal" data-target="#modalStakeMPH"  href="#" class="card-link">[Stake]</a>
+                      <a data-toggle="modal" data-target="#modalUnstakeMPH"  href="#" class="card-link">[Unstake & Claim]</a>
                     </div>
                   </div>
                   <div class="card">
@@ -3417,10 +3080,16 @@
                         Interest earned
                       </th>
                       <th class="text-dark">
-                        MPH rewards
+                        MPH rewards daily / weekly
+                        <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Liquidty providers get rewarded with MPH tokens">
+                          [i]
+                        </button>
                       </th>
                       <th class="text-dark" colspan="2">
-                        Deposit+ MPH rewards APY (unstable)
+                        MPH APY daily / weekly
+                        <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="MPH LP rewards annualized and compounded based on the last day/week">
+                          [i]
+                        </button>
                       </th>
                     </tr>
                   </thead>
@@ -3496,11 +3165,11 @@
                         <span class="text-white">0.0000 tokens</span>
                       </td>
                       <td>
-                        <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
-                        <span class="text-white">0.000000 MPH</span>
+                        <h4 class="mb-1 font-weight-normal glowing">$0.0000 / $0.0000</h4>
+                        <span class="text-white">0.000000 MPH / 0.000000 MPH</span>
                       </td>
                       <td class="glowing">
-                        0.0000%
+                        0.0000% / 0.0000%
                       </td>
                       <td class="text-right">
                         <!-- Button -->
@@ -3537,11 +3206,11 @@
                         <span class="text-white">0.0000 tokens</span>
                       </td>
                       <td>
-                        <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
-                        <span class="text-white">0.000000 MPH</span>
+                        <h4 class="mb-1 font-weight-normal glowing">$0.0000 / $0.0000</h4>
+                        <span class="text-white">0.000000 MPH / 0.000000 MPH</span>
                       </td>
-                      <td>
-                        0.0000%
+                      <td class="glowing">
+                        0.0000% / 0.0000%
                       </td>
                       <td class="text-right">
                         <!-- Button -->
@@ -3629,11 +3298,11 @@
                         <span class="text-white">0.0000 tokens</span>
                       </td>
                       <td>
-                        <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
-                        <span class="text-white">0.000000 MPH</span>
+                        <h4 class="mb-1 font-weight-normal glowing">$0.0000 / $0.0000</h4>
+                        <span class="text-white">0.000000 MPH / 0.000000 MPH</span>
                       </td>
-                      <td>
-                        0.0000%
+                      <td class="glowing">
+                        0.0000% / 0.0000%
                       </td>
                       <td class="text-right">
                         <!-- Button -->
@@ -3670,11 +3339,11 @@
                         <span class="text-white">0.0000 tokens</span>
                       </td>
                       <td>
-                        <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
-                        <span class="text-white">0.000000 MPH</span>
+                        <h4 class="mb-1 font-weight-normal glowing">$0.0000 / $0.0000</h4>
+                        <span class="text-white">0.000000 MPH / 0.000000 MPH</span>
                       </td>
-                      <td>
-                        0.0000%
+                      <td class="glowing">
+                        0.0000% / 0.0000%
                       </td>
                       <td class="text-right">
                         <!-- Button -->
@@ -3758,11 +3427,11 @@
                         <span class="text-white">0.0000 tokens</span>
                       </td>
                       <td>
-                        <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
-                        <span class="text-white">0.000000 MPH</span>
+                        <h4 class="mb-1 font-weight-normal glowing">$0.0000 / $0.0000</h4>
+                        <span class="text-white">0.000000 MPH / 0.000000 MPH</span>
                       </td>
-                      <td>
-                        0.0000%
+                      <td class="glowing">
+                        0.0000% / 0.0000%
                       </td>
                       <td class="text-right">
                         <!-- Button -->
@@ -3799,11 +3468,11 @@
                         <span class="text-white">0.0000 tokens</span>
                       </td>
                       <td>
-                        <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
-                        <span class="text-white">0.000000 MPH</span>
+                        <h4 class="mb-1 font-weight-normal glowing">$0.0000 / $0.0000</h4>
+                        <span class="text-white">0.000000 MPH / 0.000000 MPH</span>
                       </td>
-                      <td>
-                        0.0000%
+                      <td class="glowing">
+                        0.0000% / 0.0000%
                       </td>
                       <td class="text-right">
                         <!-- Button -->
@@ -3829,7 +3498,7 @@
             <!-- All pools -->
             <div class="card">
               <h2 class="mt-n3 bg-dark mb-0 mx-3 pl-3">Explore fixed rate opportunities</h2>
-              <p class="text-white mx-3 pl-3">Deposit to earn upfront fixed APY, protocol fees, incentives, etc. <a href="https://88mph.app/docs/" target="_blank" rel="noopener noreferrer">See how  it works</a></p>
+              <p class="text-white mx-3 pl-3">Deposit to earn upfront fixed APY, protocol fees, incentives, etc. <a href="https://88mph.app/docs/" target="_blank" rel="noopener noreferrer">See how it works</a></p>
               <div class="table-responsive mb-0">
                 <table class="table table-sm table-nowrap card-table">
                   <thead>
@@ -3844,7 +3513,10 @@
                         Fixed APY
                       </th>
                       <th class="text-dark" colspan="2">
-                        Deposit+MPH rewards APY (unstable)
+                        MPH APY daily / weekly
+                        <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="MPH LP rewards annualized and compounded based on the last day/week">
+                          [i]
+                        </button>
                       </th>
                     </tr>
                   </thead>
@@ -3877,7 +3549,7 @@
                         0.0000%
                       </td>
                       <td class="glowing">
-                        0.0000%
+                        0.0000% / 0.0000%
                       </td>
                       <td class="text-right">
                         <!-- Button -->
@@ -3914,7 +3586,7 @@
                         0.0000%
                       </td>
                       <td class="glowing">
-                        0.0000%
+                        0.0000% / 0.0000%
                       </td>
                       <td class="text-right">
                         <!-- Button -->
@@ -3951,7 +3623,7 @@
                         0.0000%
                       </td>
                       <td class="glowing">
-                        0.0000%
+                        0.0000% / 0.0000%
                       </td>
                       <td class="text-right">
                         <!-- Button -->

@@ -7,6 +7,10 @@ body{
   font-family: "Glass TTY VT220", sans-serif;
   color: $amber;
 }
+input[type=text]{
+  caret-color: $amber;
+  color: $amber;
+}
 input[type=range] {
   width: 100%;
   margin: 0px 0;
