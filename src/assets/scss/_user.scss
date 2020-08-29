@@ -2,14 +2,22 @@
 // user.scss
 // Use this to write your custom SCSS
 //
+$white: #ffffff !important;
+$purple: #9575cd !important;
+$pink: #FF009D !important;
+$blue: #3435F5 !important;
 $amber: #ffb000 !important;
+
 body{
   font-family: "Glass TTY VT220", sans-serif;
-  color: $amber;
+  color: $white;
+}
+.text-purple{
+  color: $purple;
 }
 input[type=text]{
-  caret-color: $amber;
-  color: $amber;
+  caret-color: $purple;
+  color: $purple;
 }
 input[type=range] {
   width: 100%;
@@ -22,18 +30,18 @@ input[type=range]:focus {
 }
 input[type=range]::-webkit-slider-runnable-track {
   background: repeating-linear-gradient(90deg, 
-        black, black .2em, #ffb000 0, #F57C00 .4em);
+        black, black .2em, #743ad5 0, #9575cd .4em);
   border: 0;
   border-radius: 0;
   width: 100%;
-  height:20px;
+  height:24px;
   cursor: pointer;
 }
 input[type=range]::-webkit-slider-thumb {
   margin-top: 0;
-  width: 10px;
-  height:20px;
-  background: $amber;
+  width: 12px;
+  height:24px;
+  background: $pink;
   border: 0;
   border-radius: 0;
   cursor: pointer;
@@ -41,45 +49,45 @@ input[type=range]::-webkit-slider-thumb {
 }
 input[type=range]:focus::-webkit-slider-runnable-track {
   background: repeating-linear-gradient(90deg, 
-        black, black .2em, #ffb000 0, #F57C00 .4em);
+        black, black .2em, #743ad5 0, #9575cd .4em);
 }
 input[type=range]::-moz-range-track {
   background: repeating-linear-gradient(90deg, 
-        black, black .2em, #ffb000 0, #F57C00 .4em);
+        black, black .2em, #743ad5 0, #9575cd .4em);
   border: 0;
   border-radius: 0;
   width: 100%;
-  height:20px;
+  height:24px;
   cursor: pointer;
 }
 input[type=range]::-moz-range-thumb {
-  width: 10px;
-  height:20px;
+  width: 12px;
+  height:24px;
   background: #ffffff;
   border: 0;
   cursor: pointer;
 }
 input[type=range]::-ms-track {
   background: repeating-linear-gradient(90deg, 
-        black, black .2em, #ffb000 0, #F57C00 .4em);
+        black, black .2em, #743ad5 0, #9575cd .4em);
   border-color: transparent;
   border-width: 0px 0;
   color: transparent;
   width: 100%;
-  height:20px;
+  height:24px;
   cursor: pointer;
 }
 input[type=range]::-ms-fill-lower {
-  background: #805800;
-  border: 1px solid #ffb000;
+  background: #743ad5;
+  border: 1px solid $purple;
 }
 input[type=range]::-ms-fill-upper {
-  background: #ffb000;
-  border: 1px solid #ffb000;
+  background: $purple;
+  border: 1px solid $purple;
 }
 input[type=range]::-ms-thumb {
-  width: 6px;
-  height:16px;
+  width: 12px;
+  height:24px;
   background: #ffffff;
   border: 0;
   cursor: pointer;
@@ -87,10 +95,10 @@ input[type=range]::-ms-thumb {
   /*Needed to keep the Edge thumb centred*/
 }
 input[type=range]:focus::-ms-fill-lower {
-  background: #ffb000;
+  background: #743ad5;
 }
 input[type=range]:focus::-ms-fill-upper {
-  background: #ffd780;
+  background: $purple;
 }
 /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
 how to remove the virtical space around the range input in IE*/
@@ -104,10 +112,18 @@ how to remove the virtical space around the range input in IE*/
 
 .navbar-light {
   background-color:transparent;
-  border-color: #ffb000;
+  border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d 72%)!important;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 3px;
 }
 .navbar-nav .nav-link.active:before{
-  border-color:$amber;
+  background-color:transparent;
+  border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d 72%)!important;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  margin-left: 8px;
 }
 .avatar-img{
   image-rendering: pixelated;
@@ -122,15 +138,16 @@ a:hover > .logo, a:hover .icon-logo{
 }
 .table thead th {
   background-color:transparent;
-  color: $amber;
-  border-bottom: 1px solid $amber;
+  color: $white;
+  border-bottom: 0;
 }
 .card{
-  border-style: solid;
-  border-color:$amber;
+  border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d 72%)!important;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 3px;
   background: transparent;
   box-shadow: none;
-  border-width: 1px;
 }
 .rounded-xl{
   border-radius: 20px
@@ -150,29 +167,35 @@ a:hover > .logo, a:hover .icon-logo{
 .bg-dark{
   background-color: #131415!important
 }
-.bg-amber{
-  background-color: $amber;
+.bg-purple{
+  background-color: $purple;
 }
-.btn-amber{
-  background-color:$amber;
+.btn-purple{
+  background-color:$purple;
   padding: 2px 0px;
   color: #131415;
 }
-.text-amber{
-  color: $amber;
+.text-purple{
+  color: $purple;
 }
+ /*
+.glowing{
+  color: $white;
+ text-shadow:0 0 3px #ffccec, 0 0 10px #f37cc5, 0 0 20px #ff52bd, 0 0 30px #FF009D;
+}*/
 .glowing{
   color: #ffe0b2;
   text-shadow:0 0 3px #FFE0B2, 0 0 10px #FFB74D, 0 0 20px #FB8C00, 0 0 30px #F57C00;
 }
-.border-amber{
-  border-color: $amber;
+.border-purple{
+  border-color: $purple;
 }
 .card-link{
-  color:#fff
+  color:#fff;
+  background: #131415;
 }
 .card-link:hover, .card-link:active{
-  color:#fff
+  color:#fff;
 }
 // buttons
 .btn-white-opacity{

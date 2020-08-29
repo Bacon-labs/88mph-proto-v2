@@ -11419,11 +11419,14 @@ a:focus, button:focus {
 
 body {
   font-family: "Glass TTY VT220", sans-serif;
-  color: #ffb000 !important; }
+  color: #ffffff !important; }
+
+.text-purple {
+  color: #9575cd !important; }
 
 input[type=text] {
-  caret-color: #ffb000 !important;
-  color: #ffb000 !important; }
+  caret-color: #9575cd !important;
+  color: #9575cd !important; }
 
 input[type=range] {
   width: 100%;
@@ -11435,61 +11438,61 @@ input[type=range]:focus {
   outline: none; }
 
 input[type=range]::-webkit-slider-runnable-track {
-  background: repeating-linear-gradient(90deg, black, black 0.2em, #ffb000 0, #F57C00 0.4em);
+  background: repeating-linear-gradient(90deg, black, black 0.2em, #743ad5 0, #9575cd 0.4em);
   border: 0;
   border-radius: 0;
   width: 100%;
-  height: 20px;
+  height: 24px;
   cursor: pointer; }
 
 input[type=range]::-webkit-slider-thumb {
   margin-top: 0;
-  width: 10px;
-  height: 20px;
-  background: #ffb000 !important;
+  width: 12px;
+  height: 24px;
+  background: #FF009D !important;
   border: 0;
   border-radius: 0;
   cursor: pointer;
   -webkit-appearance: none; }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: repeating-linear-gradient(90deg, black, black 0.2em, #ffb000 0, #F57C00 0.4em); }
+  background: repeating-linear-gradient(90deg, black, black 0.2em, #743ad5 0, #9575cd 0.4em); }
 
 input[type=range]::-moz-range-track {
-  background: repeating-linear-gradient(90deg, black, black 0.2em, #ffb000 0, #F57C00 0.4em);
+  background: repeating-linear-gradient(90deg, black, black 0.2em, #743ad5 0, #9575cd 0.4em);
   border: 0;
   border-radius: 0;
   width: 100%;
-  height: 20px;
+  height: 24px;
   cursor: pointer; }
 
 input[type=range]::-moz-range-thumb {
-  width: 10px;
-  height: 20px;
+  width: 12px;
+  height: 24px;
   background: #ffffff;
   border: 0;
   cursor: pointer; }
 
 input[type=range]::-ms-track {
-  background: repeating-linear-gradient(90deg, black, black 0.2em, #ffb000 0, #F57C00 0.4em);
+  background: repeating-linear-gradient(90deg, black, black 0.2em, #743ad5 0, #9575cd 0.4em);
   border-color: transparent;
   border-width: 0px 0;
   color: transparent;
   width: 100%;
-  height: 20px;
+  height: 24px;
   cursor: pointer; }
 
 input[type=range]::-ms-fill-lower {
-  background: #805800;
-  border: 1px solid #ffb000; }
+  background: #743ad5;
+  border: 1px solid #9575cd !important; }
 
 input[type=range]::-ms-fill-upper {
-  background: #ffb000;
-  border: 1px solid #ffb000; }
+  background: #9575cd !important;
+  border: 1px solid #9575cd !important; }
 
 input[type=range]::-ms-thumb {
-  width: 6px;
-  height: 16px;
+  width: 12px;
+  height: 24px;
   background: #ffffff;
   border: 0;
   cursor: pointer;
@@ -11497,10 +11500,10 @@ input[type=range]::-ms-thumb {
   /*Needed to keep the Edge thumb centred*/ }
 
 input[type=range]:focus::-ms-fill-lower {
-  background: #ffb000; }
+  background: #743ad5; }
 
 input[type=range]:focus::-ms-fill-upper {
-  background: #ffd780; }
+  background: #9575cd !important; }
 
 /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
 how to remove the virtical space around the range input in IE*/
@@ -11512,10 +11515,18 @@ how to remove the virtical space around the range input in IE*/
 
 .navbar-light {
   background-color: transparent;
-  border-color: #ffb000; }
+  border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d 72%) !important;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 3px; }
 
 .navbar-nav .nav-link.active:before {
-  border-color: #ffb000 !important; }
+  background-color: transparent;
+  border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d 72%) !important;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  margin-left: 8px; }
 
 .avatar-img {
   -ms-interpolation-mode: nearest-neighbor;
@@ -11537,15 +11548,16 @@ a:hover > .logo, a:hover .icon-logo {
 
 .table thead th {
   background-color: transparent;
-  color: #ffb000 !important;
-  border-bottom: 1px solid #ffb000 !important; }
+  color: #ffffff !important;
+  border-bottom: 0; }
 
 .card {
-  border-style: solid;
-  border-color: #ffb000 !important;
+  border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d 72%) !important;
+  border: 5px solid;
+  border-image-slice: 1;
+  border-width: 3px;
   background: transparent;
-  box-shadow: none;
-  border-width: 1px; }
+  box-shadow: none; }
 
 .rounded-xl {
   border-radius: 20px; }
@@ -11563,26 +11575,32 @@ a:hover > .logo, a:hover .icon-logo {
 .bg-dark {
   background-color: #131415 !important; }
 
-.bg-amber {
-  background-color: #ffb000 !important; }
+.bg-purple {
+  background-color: #9575cd !important; }
 
-.btn-amber {
-  background-color: #ffb000 !important;
+.btn-purple {
+  background-color: #9575cd !important;
   padding: 2px 0px;
   color: #131415; }
 
-.text-amber {
-  color: #ffb000 !important; }
+.text-purple {
+  color: #9575cd !important; }
 
+/*
+.glowing{
+  color: $white;
+ text-shadow:0 0 3px #ffccec, 0 0 10px #f37cc5, 0 0 20px #ff52bd, 0 0 30px #FF009D;
+}*/
 .glowing {
   color: #ffe0b2;
   text-shadow: 0 0 3px #FFE0B2, 0 0 10px #FFB74D, 0 0 20px #FB8C00, 0 0 30px #F57C00; }
 
-.border-amber {
-  border-color: #ffb000 !important; }
+.border-purple {
+  border-color: #9575cd !important; }
 
 .card-link {
-  color: #fff; }
+  color: #fff;
+  background: #131415; }
 
 .card-link:hover, .card-link:active {
   color: #fff; }
