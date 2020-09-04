@@ -3,7 +3,7 @@
 
     <!-- Toggler -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon text-amber"></span>
+      <span class="navbar-toggler-icon text-purple"></span>
     </button>
     <!-- User (xs) -->
     <div class="navbar-user d-md-none">
@@ -19,53 +19,61 @@
 
     <!-- Collapse -->
     <div class="collapse navbar-collapse" id="sidebarCollapse">
-      <a class="text-white text-left mb-5" href="@@webRoot/dashboard.html">
-        <img class="logo" src="@@webRoot/assets/img/logo.png" class="mr-2" alt="88mph logo" width="42px">
-        <span class="d-inline-block">88mph</span>
-      </a>
+      
+      <div class="row">
+        <div class="col">
+          <a class="text-white text-left my-4 d-block" href="@@webRoot/dashboard.html">
+            <img class="logo" src="@@webRoot/assets/img/logo.png" class="mr-2" alt="88mph logo" width="42px">
+            <span class="d-inline-block">88mph</span>
+          </a>
+    
+          <!-- Navigation -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="@@webRoot/">
+                Earn fixed APY
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="@@webRoot/stake.html">
+                Stake MPH
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="@@webRoot/deficit-funding.html">
+                Long interest rates
+              </a>
+            </li>
+          </ul>
+          <!-- Navigation -->
+          <ul class="navbar-nav mb-md-4 mt-4">
+            <li class="nav-item">
+              <a class="nav-link small" href="https://discord.com/" target="_blank">
+                Get Help
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link small" href="https://88mph.app/docs/" target="_blank">
+                Docs
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link small" href="https://88mph.app/docs/" target="_blank">
+                Audits
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link small" href="#" target="_blank">
+                Feedback
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-2 bg-strips">
 
-      <!-- Navigation -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="@@webRoot/">
-            Earn fixed APY
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="@@webRoot/stake.html">
-            Stake MPH
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="@@webRoot/deficit-funding.html">
-            Long interest rates
-          </a>
-        </li>
-      </ul>
-
-      <!-- Navigation -->
-      <ul class="navbar-nav mb-md-4 mt-4">
-        <li class="nav-item">
-          <a class="nav-link small" href="https://discord.com/" target="_blank">
-            Get Help
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link small" href="https://88mph.app/docs/" target="_blank">
-            Docs
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link small" href="https://88mph.app/docs/" target="_blank">
-            Audits
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link small" href="#" target="_blank">
-             Feedback
-          </a>
-        </li>
-      </ul>
+        </div>
+      </div>
+      
 
     </div> <!-- / .navbar-collapse -->
 

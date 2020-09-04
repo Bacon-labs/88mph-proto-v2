@@ -119,11 +119,13 @@ how to remove the virtical space around the range input in IE*/
 }
 .navbar-nav .nav-link.active:before{
   background-color:transparent;
-  border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d 72%)!important;
-  border: 5px solid;
-  border-image-slice: 1;
-  border-width: 1px;
-  margin-left: 8px;
+  background-image: url(../img/play_arrow-24px.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 50%;
+  width: 20px;
+  height: 20px;
+  border:0px!important
 }
 .avatar-img{
   image-rendering: pixelated;
@@ -131,15 +133,19 @@ how to remove the virtical space around the range input in IE*/
 }
 .logo, .icon-logo{
   image-rendering: pixelated;
-  filter: grayscale(1);
-}
-a:hover > .logo, a:hover .icon-logo{
-  filter: grayscale(0);
 }
 .table thead th {
   background-color:transparent;
   color: $white;
   border-bottom: 0;
+}
+.list-group-activity .list-group-item:not(:last-child)::before{
+  left:14px;
+  border: 1px solid;
+  border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d 72%)!important;
+  border-image-slice: 1;
+  border-width: 1px;
+  background-image: transparent;
 }
 .card{
   border-image-source: linear-gradient(to bottom, #743ad5, #d53a9d 72%)!important;
@@ -205,7 +211,6 @@ a:hover > .logo, a:hover .icon-logo{
 }
 .navbar-light .navbar-toggler-icon {
   image-rendering: pixelated;
-  filter: sepia(1);
 }
 @media (min-width: 1024px) {
   .w-lg-60{width: 60%};
