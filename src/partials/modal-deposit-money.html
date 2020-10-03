@@ -17,7 +17,7 @@
                 <h1 class="display-4 text-center">
                   How much would you like to deposit?
                 </h1>
-                <p class="text-white small text-center mb-5">Deposit to earn upfront fixed APY, protocol fees, incentives, etc.<br><a class="text-purple" href="https://88mph.app/docs/" target="_blank" rel="noopener noreferrer">See how it works</a>.</p>
+                <p class="text-white small text-center mb-5">Deposit to earn fixed-rate fixed APY, protocol fees, incentives, etc.<br><a class="text-purple" href="https://88mph.app/docs/" target="_blank" rel="noopener noreferrer">See how it works</a>.</p>
               
                 <div class="card">
                   <div class="card-body">
@@ -41,22 +41,12 @@
                         </div>
                       </div>
                     </div>
-                    <small class="form-text text-white mb-4">0.0000 ETH available</small>
+                    <small class="form-text text-white mb-4">0.0000 aDAI available</small>
                     <div class="form-group row mb-3 mb-lg-2">
                       <label for="colFormLabel" class="col-sm-7 col-form-label">Lending duration (min. 7d)</label>
                       <div class="col-sm-5">
-                        <div class="input-group ml-auto d-flex d-md-none">
-                          <input type="tel" min="91" value="365" placeholder="365" data-mask="#,##0" data-mask-reverse="true" id="lock-period" class="form-control text-right">
-                          <div class="input-group-append">
-                            <span id="lock-period" class="input-group-text border-0 text-white bg-transparent text-right pr-0">days</span>
-                          </div>
-                        </div>
-                        <div class="input-group ml-auto w-50 d-none d-md-block">
-                          <input type="tel" min="91" value="365" placeholder="365" data-mask="#,##0" data-mask-reverse="true" id="lock-period" class="form-control text-right">
-                          <div class="input-group-append">
-                            <span id="lock-period" class="input-group-text border-0 text-white bg-transparent text-right pr-0">days</span>
-                          </div>
-                        </div>
+                        <input type="tel" min="7" value="365" placeholder="365" data-mask="#,##0" data-mask-reverse="true" id="lock-period" class="form-control text-right">
+                        
                       </div>
                     </div>
                     <div class="mb-4">
@@ -66,17 +56,6 @@
                       <button class="card-link small px-1 ml-2" type="button" name="180d">180d</button>
                       <button class="card-link small px-1 ml-2" type="button" name="365d">365d</button>
                       <button class="card-link small px-1 ml-2" type="button" name="730d">730d</button>
-                    </div>
-                    <div class="mb-4">
-                      <div class="form-group">
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="exampleCheck2">
-                          <label class="form-check-label" for="exampleCheck2">Withdraw early option</label>
-                          <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="It'll reduce your MPH rewards">
-                            [i]
-                          </button>
-                        </div>
-                      </div>
                     </div>
                     <div class="table-responsive">
                       <table class="table mb-0">
@@ -94,8 +73,8 @@
                           </tr>
                           <tr>
                             <td class="px-0 text-white border-0">
-                              <strong>Upfront interest</strong>
-                              <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Fixed-rate interest you'll receive when your tx is confirmed">
+                              <strong>Fixed-rate interest</strong>
+                              <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Fixed-rate interest you'll receive when lending period is over.">
                                 [i]
                               </button>
                             </td>
@@ -107,7 +86,7 @@
                           <tr>
                             <td class="px-0 text-white border-0">
                               <strong>MPH APY</strong>
-                              <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="MPH LP rewards annualized and compounded based on the last week">
+                              <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="MPH tokens APY annualized and compounded based on the last week">
                                 [i]
                               </button>
                             </td>
@@ -118,7 +97,7 @@
                           <tr>
                             <td class="px-0 text-white border-0">
                               <strong>MPH rewards</strong>
-                              <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Liquidty providers get rewarded with MPH tokens that can be staked to earn rewards (protocol fees, harvested incentives, etc)">
+                              <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Liquidty providers get rewarded with MPH tokens that can be staked to earn rewards (protocol fees, harvested incentives on external protocols, etc)">
                                 [i]
                               </button>
                             </td>
@@ -170,7 +149,7 @@
 
                         <!-- Heading -->
                         <p class="mb-0 font-weight-bold">
-                          After depositing in the pool, you receive upfront fixed-rate interest and liquidity provider (LP) tokens. They represent your share of ownership in the pool.
+                          After depositing in the pool, you receive liquidity provider (LP) tokens. They represent your share of ownership in the pool.
                         </p>
 
                       </div>
@@ -204,7 +183,24 @@
 
                         <!-- Heading -->
                         <p class="mb-0 font-weight-bold">
-                          By staking your MPH, you can claim your share of rewards from the 88mph's vault where all the 88mph fee and external incentives harvested - COMP, CRV, etc. - are collected.
+                          By staking your MPH, you can claim your share of rewards from the 88mph's reward pool where all the 88mph fee and external incentives harvested - COMP, CRV, etc. - are collected.
+                        </p>
+
+                      </div>
+                    </div> <!-- / .row -->
+                  </div>
+                  <div class="list-group-item">
+                    <div class="row">
+                      <div class="col-auto text-center">
+
+                        <h2 class="text-center"><5></h2>
+
+                      </div>
+                      <div class="col ml-n2 d-flex align-items-center">
+
+                        <!-- Heading -->
+                        <p class="mb-0 font-weight-bold">
+                          When your lending period is over, you withdraw your principal with the fixed-rate interest earned during the period of lending.
                         </p>
 
                       </div>
