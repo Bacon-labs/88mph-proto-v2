@@ -4,38 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- meta -->
-    <title>88mph - Earn fixed-rate interest on your cryptocurrency</title>
+    <title>88mph - Lend your cryptocurrency assets at a fixed interest rate</title>
     <meta content="@88mphapp" name="twitter:site" />
     <meta content="summary_large_image" name="twitter:card" />
     <meta content="assets/img/og-twitter-image.jpg" name="twitter:image" />
     <meta content="assets/img/og-twitter-image.jpg" itemprop="image" />
     <meta content="assets/img/og-twitter-image.jpg" property="og:image" />
-    <meta name="description" content="Deposit your cryptocurrency to earn fixed-rate interest & claim your rewards" />
-    <meta content="88mph - Earn Fixed-Rate Interest" property="og:title" />
-
-      <meta content="88mph - Earn Fixed-Rate Interest" itemprop="name" />
-
-      <meta content="88mph - Earn Fixed-Rate Interest" name="twitter:title" />
-
-      <meta content="Deposit your cryptocurrency to earn fixed-rate interest & claim your rewards" property="og:description" />
-
-      <meta content="Deposit your cryptocurrency to earn fixed-rate interest & claim your rewards" itemprop="description" />
-
-      <meta content="Deposit your cryptocurrency to earn fixed-rate interest & claim your rewards" name="twitter:description" />
-
-      <meta content="Deposit your cryptocurrency to earn fixed-rate interest & claim your rewards" name="description" />
-
+    <meta name="description" content="Earn a fixed APY on your crypto assets and earn liquidity mining and system rewards." />
+    <meta content="88mph - Lend your cryptocurrency assets at a fixed interest rate" property="og:title" />
+    <meta content="88mph" itemprop="name" />
+    <meta content="88mph - Lend your cryptocurrency assets at a fixed interest rate" name="twitter:title" />
+    <meta content="Earn a fixed APY on your crypto assets and earn liquidity mining and system rewards" property="og:description" />
+    <meta content="Earn a fixed APY on your crypto assets and earn liquidity mining and system rewards" itemprop="description" />
+    <meta content="Earn a fixed APY on your crypto assets and earn liquidity mining and system rewards" name="twitter:description" />
+    <meta content="Earn a fixed APY on your crypto assets and earn liquidity mining and system rewards" name="description" />
     <link rel="icon" type="image/png" href="assets/img/icon-default.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/icon-default.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/icon-default.png">
-
     <!-- Libs CSS -->
     <link rel="stylesheet" href="./assets/fonts/feather/feather.css" />
     <link rel="stylesheet" href="./assets/libs/flatpickr/dist/flatpickr.min.css" />
     <link rel="stylesheet" href="./assets/libs/quill/dist/quill.core.css" />
     <link rel="stylesheet" href="./assets/libs/highlightjs/styles/vs2015.css" />
-
     <!-- Theme CSS -->
     <link rel="stylesheet" href="./assets/css/theme-dark.min.css">
 
@@ -151,6 +142,17 @@
                                   <span class="text-white">0.000000 MPH</span>
                                 </td>
                               </tr>
+                              <tr>
+                                <td class="px-0 text-white border-0">
+                                  <strong>MPH to repay when withdraw</strong>
+                                  <button type="button" class="btn btn-sm btn-link p-0 text-white" data-toggle="tooltip" data-placement="top" title="Liquidty providers need to repay 90% of their MPH tokens when they want to withdraw. Relax! Keep them warm by staking them on 88mph to earn rewards (protocol fees, harvested incentives on external protocols, etc).">
+                                    [i]
+                                  </button>
+                                </td>
+                                <td class="text-white text-right border-0">
+                                  <span class="text-white">0.000000 MPH</span>
+                                </td>
+                              </tr>
                             </tbody>
                           </table>
                         </div>
@@ -211,7 +213,7 @@
 
                             <!-- Heading -->
                             <p class="mb-0 font-weight-bold">
-                              By providing liquidity on any of the 88mph pools, you earn MPH LP reward tokens during the fixed-period of lending.
+                              By providing liquidity on any of the 88mph pools, you earn upfront MPH LP reward tokens.
                             </p>
 
                           </div>
@@ -228,7 +230,7 @@
 
                             <!-- Heading -->
                             <p class="mb-0 font-weight-bold">
-                              By staking your MPH, you can claim your share of rewards from the 88mph's reward pool where all the 88mph fee and external incentives harvested - COMP, CRV, etc. - are collected.
+                              By staking your MPH, you can claim your share of rewards from the 88mph's reward pool where all the liquidity mining and system rewards are collected.
                             </p>
 
                           </div>
@@ -245,11 +247,139 @@
 
                             <!-- Heading -->
                             <p class="mb-0 font-weight-bold">
-                              When your lending period is over, you withdraw your principal with the fixed-rate interest earned during the period of lending.
+                              When your lending period is over, you withdraw your principal with the fixed-rate interest earned during the period of lending. When you want to withdraw, you need to repay 90% of the initial MPH tokens received at the time of deposit.
                             </p>
 
                           </div>
                         </div> <!-- / .row -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
+
+
+    <!-- Modal: withdraw money -->
+    <!-- IDEA: modal withdrawMoney -->
+    <div class="modal fade fixed-right" id="withdrawMoney" tabindex="-1" role="dialog" aria-labelledby="withdrawMoney" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
+        <div class="modal-content">
+          <div class="modal-body pt-0 py-lg-0">
+            <div class="row no-gutters">
+              <div class="col-auto mr-auto">
+                <button class="btn btn-link text-white pl-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                  <i class="fe fe-arrow-left h2 mb-0"></i>
+                </button>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6 col-xl-6 pt-0 ">
+                <div class="row justify-content-center no-gutters">
+                  <div class="col-12 col-lg-10 pt-3 pb-5">
+                    <h1 class="display-4 text-center">
+                      Withdraw
+                    </h1>
+                    <p class="text-white small text-center mb-5">It's time to get your fixed yield.</p>
+              
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row justify-content-center mb-4">
+                          <div class="col-6">
+                            <h6 class="header-pretitle mb-2">
+                              Principal to withdraw
+                            </h6>
+                            <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
+                            <div class="text-white d-block">0.0000 tokens</div>
+                          </div>
+                          <div class="col-6">
+                            <h6 class="header-pretitle mb-2">
+                              Interest to withdraw
+                            </h6>
+                            <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
+                            <div class="text-white d-block">0.0000 tokens</div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-center">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Amount of MPH to repay</label>
+                              <input type="text mb-2" class="form-control form-control-lg" value="0.0000" placeholder="0.0000" aria-label="" aria-describedby="">
+                              <p class="small text-secondary mb-0 mt-2">90% of the MPH tokens your received at the time of deposit.</p>
+                            </div>
+                            <button class="card-link small px-1" type="button">
+                              Continue
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- / modal -->
+
+
+    <!-- Modal: withdraw early money -->
+    <!-- IDEA: modal withdrawEarlyMoney -->
+    <div class="modal fade fixed-right" id="withdrawEarlyMoney" tabindex="-1" role="dialog" aria-labelledby="withdrawEarlyMoney" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical" role="document">
+        <div class="modal-content">
+          <div class="modal-body pt-0 py-lg-0">
+            <div class="row no-gutters">
+              <div class="col-auto mr-auto">
+                <button class="btn btn-link text-white pl-0" type="button" name="button" data-dismiss="modal" aria-label="Close">
+                  <i class="fe fe-arrow-left h2 mb-0"></i>
+                </button>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-6 col-xl-6 pt-0 ">
+                <div class="row justify-content-center no-gutters">
+                  <div class="col-12 col-lg-10 pt-3 pb-5">
+                    <h1 class="display-4 text-center">
+                      Withdraw early
+                    </h1>
+                    <p class="text-white small text-center mb-5">Get your principal and your fixed yield earned so far.</p>
+              
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row justify-content-center mb-4">
+                          <div class="col-6">
+                            <h6 class="header-pretitle mb-2">
+                              Principal to withdraw
+                            </h6>
+                            <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
+                            <div class="text-white d-block">0.0000 tokens</div>
+                          </div>
+                          <div class="col-6">
+                            <h6 class="header-pretitle mb-2">
+                              Interest to withdraw
+                            </h6>
+                            <h4 class="mb-1 font-weight-normal glowing">$0.0000</h4>
+                            <div class="text-white d-block">0.0000 tokens</div>
+                          </div>
+                        </div>
+                        <div class="row justify-content-center">
+                          <div class="col">
+                            <div class="form-group">
+                              <label>Amount of MPH to repay</label>
+                              <input type="text mb-2" class="form-control form-control-lg" value="0.0000" placeholder="0.0000" aria-label="" aria-describedby="">
+                              <p class="small text-secondary mb-0 mt-2">90% of the MPH tokens your received at the time of deposit.</p>
+                            </div>
+                            <button class="card-link small px-1" type="button">
+                              Continue
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -390,6 +520,11 @@
                 <li class="nav-item">
                   <a class="nav-link text-white" href="./deficit-funding.html">
                     Long interest rates
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="./stats.html">
+                    Stats
                   </a>
                 </li>
               </ul>
